@@ -11,7 +11,7 @@ const TOOLS = [
   "React.js", "JavaScript ES6+", "HTML5", "CSS3",
   "Tailwind CSS", "Bootstrap", "Material UI",
   "Git", "GitHub", "Postman", "Vercel", "VS Code",
-  "Chrome DevTools", "Axios", "Fetch API",
+  "Chrome DevTools", "Axios", "Fetch API", "REST API",
 ];
 
 const SKILL_CATEGORIES = [
