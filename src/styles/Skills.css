@@ -1,0 +1,63 @@
+.skills-page { background: var(--bg2); }
+
+/* BARS */
+.skills-bars-section { margin-bottom: 72px; }
+.skills-bars-title {
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--text-dim); margin-bottom: 28px;
+}
+.skills-bars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.skill-bar-row {
+  padding: 24px 32px 24px 0; border-bottom: 1px solid var(--border);
+}
+.skill-bar-row:nth-child(even) { padding: 24px 0 24px 32px; border-left: 1px solid var(--border); }
+.skill-bar-top { display: flex; justify-content: space-between; margin-bottom: 12px; }
+.skill-bar-name { font-size: 14px; font-weight: 500; }
+.skill-bar-pct {
+  font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text-dim);
+}
+.skill-bar-track { height: 2px; background: rgba(238,233,224,0.08); position: relative; overflow: hidden; }
+.skill-bar-fill {
+  position: absolute; top: 0; left: 0; height: 100%; background: var(--accent);
+  width: 0; transition: width 1.4s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* CATEGORIES */
+.skills-categories { margin-bottom: 72px; }
+.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.cat-card {
+  background: rgba(238,233,224,0.02); border: 1px solid var(--border);
+  padding: 32px 28px; transition: all 0.3s;
+}
+.cat-card:hover { border-color: rgba(0,255,178,0.18); background: rgba(0,255,178,0.02); }
+.cat-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.cat-icon { font-size: 24px; }
+.cat-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.05em; }
+.cat-items { display: flex; flex-wrap: wrap; gap: 8px; }
+.cat-item {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 14px; border: 1px solid var(--border); color: var(--text-muted);
+  transition: all 0.2s;
+}
+.cat-item:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ACHIEVEMENTS */
+.achievements-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+.achievement-card {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 28px; border: 1px solid var(--border);
+  background: rgba(238,233,224,0.02); transition: all 0.3s;
+}
+.achievement-card:hover { border-color: rgba(0,255,178,0.2); background: rgba(0,255,178,0.03); }
+.ach-icon { font-size: 28px; flex-shrink: 0; }
+.ach-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); font-weight: 300; }
+
+@media (max-width: 900px) {
+  .skills-bars-grid { grid-template-columns: 1fr; }
+  .skill-bar-row:nth-child(even) { padding: 24px 0; border-left: none; }
+  .cat-grid { grid-template-columns: 1fr 1fr; }
+  .achievements-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .cat-grid { grid-template-columns: 1fr; }
+}
